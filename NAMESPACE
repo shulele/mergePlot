@@ -2,7 +2,7 @@
 
 export("%>%")
 export(MakePic)
-export(composite)
+export(mergePlot)
 export(plotCanvas)
 importFrom(grDevices,dev.off)
 importFrom(grDevices,png)

@@ -25,6 +25,7 @@ figs=MakePic(axes = TRUE, res=72, width=400, height=400)
 print(figs)
 
 # save pictures in to path 'Figure'
-figs=MakePic(n=6, axes = TRUE, path ='Figure' )
-list.files('Figure')
+# figs=MakePic(n=6, axes = TRUE, path ='Figure' )
+# list.files('Figure')
+
 }

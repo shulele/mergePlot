@@ -14,8 +14,9 @@
 #' print(figs)
 #'
 #' # save pictures in to path 'Figure'
-#' figs=MakePic(n=6, axes = TRUE, path ='Figure' )
-#' list.files('Figure')
+#' # figs=MakePic(n=6, axes = TRUE, path ='Figure' )
+#' # list.files('Figure')
+#'
 MakePic <- function(n=6,
                     path=NULL,
                     axes=FALSE,

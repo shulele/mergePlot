@@ -1,5 +1,3 @@
-
-
 #' Plot figs onto canvas
 #'
 #' @param figs  The figures put on the canvas.
@@ -14,7 +12,7 @@
 #' sub = MakePic(n=6, width=400, height=300)
 #' figs= sub %>% magick::image_trim()
 #' bg = plotCanvas(TEST=TRUE, col.bg = 'pink')
-#' fig.com = composite(figs,  canvas = bg)
+#' fig.com = mergePlot(figs,  canvas = bg)
 #' plot(fig.com)
 #'
 #' # ---- More complex examples ----
@@ -36,9 +34,10 @@
 #'     magick::image_resize(geometry_size_percent(resize[i]))
 #' }
 #' figs = do.call(c, figs)
-#' fig.com = composite(figs,  canvas = bg, location=location)
+#' fig.com = mergePlot(figs,  canvas = bg, location=location)
 #' plot(fig.com)
-#'
+#' # ---- save files ----
+#' #image_write(image=fig.com, format = 'pdf', path='output.pdf')
 #'
 #' # ---- more examples ----
 #' library(magick)
@@ -54,12 +53,13 @@
 #' }
 #' figs = do.call(c, figs)
 #' bg=plotCanvas(height = 600, width=600, TEST=TRUE)
-#' fig.com = composite(figs, canvas = bg)
+#' fig.com = mergePlot(figs, canvas = bg)
 #' plot(fig.com)
+#' # ---- save files ----
+#' #image_write(image=fig.com, format = 'pdf', path='output.pdf')
 #'
 #'
-#'
-composite <- function(figs, canvas=plotCanvas(TEST=TEST), location=NULL, TEST=FALSE){
+mergePlot <- function(figs, canvas=plotCanvas(TEST=TEST), location=NULL, TEST=FALSE){
   nf = length(figs)
   if(is.null(location)){
     nr = 2
