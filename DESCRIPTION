@@ -1,0 +1,20 @@
+Package: mergePlot
+Type: Package
+Title: Merge Pictures or Photos
+Version: 0.1.0
+Author: Lele Shu <lele.shu@gmail.com>
+Maintainer: Lele Shu <lele.shu@gmail.com>
+Description: Merge pictures. 
+    You can merge multiple plots or photos into a single plot.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.5.0)
+Imports: 
+    magick,
+    magrittr
+RoxygenNote: 7.1.1
+Suggests: testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
